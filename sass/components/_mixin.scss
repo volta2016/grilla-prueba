@@ -1,5 +1,55 @@
-@mixin boxiterno {
-	color: $color-green;
+@mixin box {
+    display: block;
     width: 100%;
-    height: 10%;
+    height: 20%;
+}
+@mixin box-b {
+    display: block;
+    width: 20%;
+    height: 100%;
+}
+@mixin boxiterno-up {
+	background-color: $color-green;
+    border-top: 4px black solid;
+    margin-top: 1.2em;
+}
+@mixin boxiterno-down {
+	background-color: $color-yellow;
+    border-bottom: 4px black solid;
+    margin-bottom: 1.2em;
+}
+@mixin boxinterno-right {
+	background-color: $color-organe;
+    border-right: 4px black solid;
+    margin-right: 1.2em;
+}
+@mixin boxinterno-left {
+	background-color: $color-blue;
+    border-left: 4px black solid;
+    margin-left: 1.2em;
+}
+@mixin aling-box-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+@mixin aling-box-item-b {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+@mixin aling-box-item-c {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+@mixin aling-box-item-d {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
 }

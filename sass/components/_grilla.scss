@@ -1,17 +1,79 @@
-.container {
-    display: grid;
-    grid-template: repeat(5, 100px) / repeat(5, 100px);
-    grid-gap: 10px;
-}
-.item {
-  
-}
-.item:nth-child(2) {
-   @mixin boxiterno; 
-}
 .container-base {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+.container {
+    display: grid;
+    grid-template: repeat(5, 100px) / repeat(5, 100px);
+    grid-gap: 10px;
+}
+
+i {
+    font-size: 30px;
+}
+
+.item {
+  border: 4px black solid;
+}
+.item:nth-child(1), .item:nth-child(5), .item:nth-child(21), .item:nth-child(25) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotar-1 {
+    transform: rotate(120deg);
+}
+
+.rotar-2 {
+    transform: rotate(220deg);
+}
+
+.rotar-3 {
+    transform: rotate(45deg);
+}
+.rotar-4 {
+    transform: rotate(-45deg);
+}
+
+.transparent {
+    border: none;
+}
+
+.container  .item:nth-child(2) span, .container  .item:nth-child(3) span, .container  .item:nth-child(4) span  {
+   @include boxiterno-up;
+   @include box; 
+}
+
+.container  .item:nth-child(2), .container  .item:nth-child(3), .container  .item:nth-child(4)   {
+    @include aling-box-item;
+}
+
+.container  .item:nth-child(10) span, .container  .item:nth-child(15) span, .container  .item:nth-child(20) span   {
+    @include boxinterno-right;
+    @include box-b; 
+}
+
+.container  .item:nth-child(10), .container  .item:nth-child(15), .container  .item:nth-child(20) {
+    @include  aling-box-item-b;
+}
+
+.container  .item:nth-child(6) span, .container  .item:nth-child(11) span, .container  .item:nth-child(16) span   {
+    @include boxinterno-left;
+    @include box-b; 
+}
+
+.container  .item:nth-child(6), .container  .item:nth-child(11), .container  .item:nth-child(16) {
+    @include  aling-box-item-c;
+}
+
+.container  .item:nth-child(22) span, .container  .item:nth-child(23) span, .container  .item:nth-child(24) span  {
+   @include boxiterno-down;
+   @include box;
+}
+
+.container  .item:nth-child(22), .container  .item:nth-child(23), .container  .item:nth-child(24)   {
+    @include aling-box-item-d;
 }
