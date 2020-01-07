@@ -1,0 +1,17 @@
+.container {
+    display: grid;
+    grid-template: repeat(5, 100px) / repeat(5, 100px);
+    grid-gap: 10px;
+}
+.item {
+  
+}
+.item:nth-child(2) {
+   @mixin boxiterno; 
+}
+.container-base {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
